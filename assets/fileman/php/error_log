@@ -1,0 +1,10 @@
+[20-Dec-2014 00:28:48 Asia/Jakarta] PHP Warning:  POST Content-Length of 23069607 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[20-Dec-2014 00:30:16 Asia/Jakarta] PHP Warning:  POST Content-Length of 23069607 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[20-Dec-2014 00:30:30 Asia/Jakarta] PHP Warning:  POST Content-Length of 23069607 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[20-Dec-2014 00:30:30 Asia/Jakarta] PHP Warning:  POST Content-Length of 23069607 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[20-Jan-2015 01:36:38 UTC] PHP Warning:  imagecreatefromjpeg(): gd-jpeg: JPEG library reports unrecoverable error:  in /home/dkpsemar/public_html/fileman/php/functions.inc.php on line 367
+[20-Jan-2015 01:36:38 UTC] PHP Warning:  imagecreatefromjpeg(): '/home/dkpsemar/public_html/fileman/Uploads/credits.jpg' is not a valid JPEG file in /home/dkpsemar/public_html/fileman/php/functions.inc.php on line 367
+[20-Jan-2015 01:36:38 UTC] PHP Warning:  imagejpeg() expects parameter 1 to be resource, boolean given in /home/dkpsemar/public_html/fileman/php/functions.inc.php on line 382
+[20-Jan-2015 01:36:38 UTC] PHP Warning:  imagecreatefromjpeg(): gd-jpeg: JPEG library reports unrecoverable error:  in /home/dkpsemar/public_html/fileman/php/functions.inc.php on line 367
+[20-Jan-2015 01:36:38 UTC] PHP Warning:  imagecreatefromjpeg(): '/home/dkpsemar/public_html/fileman/Uploads/credits.jpg' is not a valid JPEG file in /home/dkpsemar/public_html/fileman/php/functions.inc.php on line 367
+[20-Jan-2015 01:36:38 UTC] PHP Warning:  imagecopyresampled() expects parameter 2 to be resource, boolean given in /home/dkpsemar/public_html/fileman/php/functions.inc.php on line 443
