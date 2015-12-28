@@ -204,6 +204,17 @@
 													<textarea class="form-control" name="deskripsi" rows="3"></textarea>
 												</div>
 											</div>
+											<div class="form-group">
+												<label class="col-md-3 control-label">Tampilkan di depan? </label>
+												<div class="col-md-9">
+													<div class="icheck-list">
+														<label>
+														<input type="radio" name="front" value="1" class="icheck"> Ya</label>
+														<label>
+														<input type="radio" name="front" value="0" checked class="icheck"> Tidak</label>
+													</div>
+												</div>
+											</div>
 										</div>
 										<div class="tab-pane" id="tab_15_2">
 											<div class="row">

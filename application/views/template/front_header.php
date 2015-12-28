@@ -15,6 +15,9 @@
         <link rel="stylesheet" href="<?php echo base_url(); ?>assets/front/bootstrap/css/bootstrap.css">
         <link rel="stylesheet" href="<?php echo base_url(); ?>assets/front/css/style.css">
         <link rel="stylesheet" href="<?php echo base_url(); ?>assets/front/css/animate.min.css">
+        <link rel="stylesheet" href="<?php echo base_url(); ?>assets/global/plugins/select2/select2.css"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="<?php echo base_url(); ?>assets/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.css"/>
         <script type="text/javascript">
           var root = '<?php echo base_url() ?>';
         </script>

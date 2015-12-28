@@ -125,6 +125,21 @@
 															<textarea class="form-control" name="deskripsi" rows="3"><?php echo $data[0]['deskripsi'] ?></textarea>
 														</div>
 													</div>
+													<div class="form-group">
+												<label class="col-md-3 control-label">Tampilkan di depan? </label>
+												<div class="col-md-9">
+													<div class="icheck-list">
+														<label>
+														<input type="radio" name="front" class="icheck" value="1" <?php if ($data[0]['front'] == 1): ?>
+															checked
+														<?php endif ?>> Ya</label>
+														<label>
+														<input type="radio" name="front" class="icheck" value="0" <?php if ($data[0]['front'] == 0): ?>
+															checked
+														<?php endif ?>> Tidak</label>
+													</div>
+												</div>
+											</div>
 												</div>
 												<div class="tab-pane" id="tab_15_2">
 													<div class="row">

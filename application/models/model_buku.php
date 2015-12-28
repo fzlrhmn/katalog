@@ -15,6 +15,55 @@ class Model_buku extends CI_Model {
 		$this->db->join('tbl_user', 'tbl_buku.penyusun = tbl_user.id_user', 'left');
 		$this->db->join('master_kabupaten', 'tbl_buku.id_kabupaten =master_kabupaten.id_kabupaten', 'left');
 		$this->db->where('tbl_buku.deleted', 0);
+		$this->db->order_by('id_buku', 'desc');
+		$query = $this->db->get();
+		$result = $query->result_array();
+		return $result;
+	}
+
+	public function get_buku_front()
+	{
+		$this->db->select('tbl_buku.*,tbl_file.file as cover');
+		$this->db->from('tbl_buku');
+		$this->db->join('tbl_file', 'tbl_buku.id_buku = tbl_file.id_buku', 'right');
+		$this->db->where('tbl_buku.deleted', 0);
+		$this->db->where('tbl_buku.front', 1);
+		$this->db->where('tbl_file.id_kategori', 1);
+		$this->db->where('tbl_file.deleted', 0);
+		$this->db->order_by('id_buku', 'desc');
+		$query = $this->db->get();
+		$result = $query->result_array();
+		return $result;
+	}
+
+	public function search_buku_front($object)
+	{
+		$this->db->select('tbl_buku.*,tbl_file.file as cover');
+		$this->db->from('tbl_buku');
+		$this->db->join('tbl_file', 'tbl_buku.id_buku = tbl_file.id_buku', 'right');
+		$this->db->where('tbl_buku.deleted', 0);
+		$this->db->where('tbl_file.id_kategori', 1);
+		$this->db->where('tbl_file.deleted', 0);
+		if ($object['id_kabupaten'] != 0) {
+			$this->db->where('tbl_buku.id_kabupaten', $object['id_kabupaten']);
+		}
+		if ($object['penyusun'] != 0) {
+			$this->db->where('tbl_buku.penyusun', $object['penyusun']);
+		}
+		if ($object['jenis'] != 0) {
+			$this->db->where('tbl_buku.jenis', $object['jenis']);
+		}
+		if ($object['bidang'] != 0) {
+			$this->db->where('tbl_buku.bidang', $object['bidang']);
+		}
+		if ($object['no_buku'] != '') {
+			$this->db->like('tbl_buku.no_buku', $object['no_buku']);
+		}
+		if ($object['judul'] != '') {
+			$this->db->like('tbl_buku.judul', $object['judul']);
+		}
+		$this->db->order_by('id_buku', 'desc');
+		$this->db->limit(50);
 		$query = $this->db->get();
 		$result = $query->result_array();
 		return $result;
@@ -31,7 +80,8 @@ class Model_buku extends CI_Model {
 		   'jenis' 			=> $object['jenis'],
 		   'bidang' 		=> $object['bidang'],
 		   'rakBuku' 		=> $object['rakBuku'],
-		   'deskripsi' 		=> $object['deskripsi']
+		   'deskripsi' 		=> $object['deskripsi'],
+		   'front' 			=> $object['front']
 		);
 
 		$insert 	= $this->db->insert('tbl_buku', $input);
@@ -73,7 +123,8 @@ class Model_buku extends CI_Model {
 		   'jenis' 			=> $object['jenis'],
 		   'bidang' 		=> $object['bidang'],
 		   'rakBuku' 		=> $object['rakBuku'],
-		   'deskripsi' 		=> $object['deskripsi']
+		   'deskripsi' 		=> $object['deskripsi'],
+		   'front' 			=> $object['front']
 		);
 		$this->db->where('id_buku', $object['id_buku']);
 		$insert 	= $this->db->update('tbl_buku', $input);
